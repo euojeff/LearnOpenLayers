@@ -33,3 +33,13 @@ var markerVectorLayer = new ol.layer.Vector({
   source: vectorSource,
 });
 map.addLayer(markerVectorLayer);
+
+
+var municipios = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: 'static/data/municipios_brasileiros.kml',
+    format: new ol.format.KML()
+  })
+});
+
+map.addLayer(municipios);
